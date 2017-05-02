@@ -15,9 +15,8 @@ module.exports = function(app) {
 // allowing users to post their info and compare it to users in the system already
 	app.post("api/friends", function(req, res) {
     // Here we take the result of the user"s survey POST and parse it.
-    	var newFriend = req.body;
-    	var newFriendScores = newFriend.scores;
-    	friends.push(newFriend);
+    	var addTo = req.body;
+    	friends.push(addTo);
 	});
 
 }

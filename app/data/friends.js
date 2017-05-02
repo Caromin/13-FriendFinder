@@ -1,7 +1,7 @@
 var friends = [
 	{
-	"name": "Black Power Ranger",
-	"scores": [
+	name: "Black Power Ranger",
+	scores: [
 		"5",
 		"1",
 		"4",
@@ -15,8 +15,8 @@ var friends = [
 		]
 	},
 	{
-	"name": "Red Power Ranger",
-	"scores": [
+	name: "Red Power Ranger",
+	scores: [
 		"4",
 		"2",
 		"5",
@@ -30,8 +30,8 @@ var friends = [
 		]
 	},
 	{
-	"name": "Blue Power Ranger",
-	"scores": [
+	name: "Blue Power Ranger",
+	scores: [
 		"5",
 		"2",
 		"2",
@@ -45,8 +45,8 @@ var friends = [
 		]
 	},
 	{
-	"name": "Pink Power Ranger",
-	"scores": [
+	name: "Pink Power Ranger",
+	scores: [
 		"3",
 		"3",
 		"4",
@@ -60,8 +60,8 @@ var friends = [
 		]
 	},
 	{
-	"name": "Godzilla (The true 5point king!)",
-	"scores": [
+	name: "Godzilla (The true 5point king!)",
+	scores: [
 		"5",
 		"5",
 		"5",
@@ -75,8 +75,8 @@ var friends = [
 		]
 	},
 	{
-	"name": "Jar Jar Binks (Did you even try?)",
-	"scores": [
+	name: "Jar Jar Binks (Did you even try?)",
+	scores: [
 		"1",
 		"1",
 		"1",
@@ -89,6 +89,6 @@ var friends = [
 		"1"
 		]
 	}
-]
+];
 
 module.exports = friends;
