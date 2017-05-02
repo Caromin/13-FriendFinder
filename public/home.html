@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Friend Finder</title>
+<!-- bootstrap CDN link	 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>	
+</head>
+<body>
+<div class="jumbotron">
+	<h1 class= "display-3">Welcome to FriendFinder</h1>
+	<p class="lead">This website uses a survey to compare your answers with others in the system to find your perfect match vs. others in our system.</p>
+	<a id="startBtn" class="btn btn-primary btn-lg" href="/survey">Click to start!</a>
+</div>
+
+<div id="footer" class="container">
+	<div class="d-flex justify-content-center">
+		<button class="btn btn-link" href="/api/friendsList">Current Users in the system</button>
+		<p style="padding:8px 16px;">Webpage created by Christian A. </p> 
+	</div>	
+</div>
+
+<!-- scripts for bootstrap, jquery and personal js files -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../server.js"></script>
+</body>
+</html>
