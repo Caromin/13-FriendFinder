@@ -12,11 +12,12 @@ module.exports = function(app) {
 	  res.json(friends);
 	});
 
+
 // allowing users to post their info and compare it to users in the system already
-	app.post("api/friends", function(req, res) {
-    // Here we take the result of the user"s survey POST and parse it.
-    	var addTo = req.body;
-    	friends.push(addTo);
+	app.post("/api/friends", function(req, res) {
+    
+    	var test = req.body;
+    	friends.push(test);
 	});
 
 }
