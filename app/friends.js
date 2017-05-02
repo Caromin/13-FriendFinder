@@ -92,3 +92,5 @@ var friendsList = [
 ]
 
 module.exports = friendsList;
+
+console.log("friendList data has loaded");

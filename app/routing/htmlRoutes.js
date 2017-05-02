@@ -1,13 +1,15 @@
 var express = require('express');
+var path = require("path");
+
+console.log("htmlRoutes has loaded!");
+
+
 // Routes
 // =============================================================
-
 // Basic route that sends the user first to the AJAX Page
-module.exports = (function() { 
+module.exports = function(app) { 
 
- var app = express.Router();
-
-	app.get("/", function(req, res) {
+app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/home.html"));
 });
 
@@ -16,8 +18,4 @@ app.get("/survey", function(req, res) {
   res.sendFile(path.join(__dirname, "../public/survey.html"));
 });
 
-app.get("/api/friendsList", function(req, res) {
-  return res.json(friendsList);
-});
-
-});
+};
