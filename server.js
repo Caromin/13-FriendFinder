@@ -9,7 +9,7 @@ var PORT = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + "/app/public"));
 
-// (app) is the function that was being exported in that file
+// (app) is the variable app = express(); that is being passed through to the routes.js
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 

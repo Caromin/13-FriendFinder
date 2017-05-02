@@ -206,9 +206,10 @@ $('#submitId').on('click', function(event) {
 			]
 	};     
 
-//When I am posting, I am sending test to api/friends then going through apiRoutes.js
+// The post line takes the variable above and pushes it to the api/friends app.post
 	$.post("/api/friends", test, function(data) {
 
+// inside here is where unrelated code could be, but not related to the app.post in apiRoutes.js    
 		
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           // $("#nameId").text(data.name);
