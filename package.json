@@ -9,20 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Caromin/node-express-web-server.git"
+    "url": "git+https://github.com/Caromin/13-FriendFinder.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Caromin/node-express-web-server/issues"
+    "url": "https://github.com/Caromin/13-FriendFinder/issues"
   },
-  "homepage": "https://github.com/Caromin/node-express-web-server#readme",
+  "homepage": "https://github.com/Caromin/13-FriendFinder#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "http": "0.0.0",
     "path": "^0.12.7",
-    "reload": "^1.1.2"
   }
 }
