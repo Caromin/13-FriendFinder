@@ -1,12 +1,6 @@
-var express = require('express');
 var path = require("path");
 
-console.log("htmlRoutes has loaded!");
-
-
-// Routes
-// =============================================================
-// Basic route that sends the user first to the AJAX Page
+// basic routes that sends the user first to each publix link based on the .get request path
 module.exports = function(app) { 
 
 app.get("/", function(req, res) {

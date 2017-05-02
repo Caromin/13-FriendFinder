@@ -1,10 +1,10 @@
 // requiring friendList data
 var friends = require('../data/friends.js');
+var path = require("path");
+
 
 // exporting the function
 // what is the purpose of the apps parameter?
-console.log("I have received friendsList inside of apiRoutes.");
-
 module.exports = function(app) {
 
 // using this route to show a body-parser version of this json response
