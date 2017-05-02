@@ -5,7 +5,8 @@
 	<title>Friend Finder</title>
 <!-- bootstrap CDN link	 -->	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS & JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
 <div class="jumbotron">
@@ -151,15 +152,43 @@
 
 <div id="footer" class="container">
 	<div class="d-flex justify-content-center">
-		<button class="btn btn-link " href="/api/friends">Current Users in the system</button>
+		<a href="/api/friends">Current Users in the system</a>
 		<p style="padding:8px 16px;">Webpage created by Christian A. </p> 
 	</div>	
 </div>
 
+
+<!-- Modal -->
+<div id="results-modal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h2 class="modal-title"><strong>Best Match</strong></h2>
+    </div>
+    <div class="modal-body">
+      <h2 id="match-name"></h2>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
 <!-- scripts for bootstrap, jquery and personal js files -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="../server.js"></script>
+	<script type="text/javascript" src="../../server.js"></script>
 
 <script>
 $('#submitId').on('click', function(event) {
@@ -168,11 +197,16 @@ $('#submitId').on('click', function(event) {
 		name: $('#nameId').val(),
 		score: [$('#question1').val(), $('#question2').val(), $('#question3').val(), $('#question4').val(), $('#question5').val(), $('#question6').val(), $('#question7').val(), $('#question8').val(), $('#question9').val(), $('#question10').val()]
 	};     
-	$.post(localhost:3000 + "/api/friends", newFriend)
-      .done(function(data) {
-        console.log(data);
-        alert("Adding friend to friendsList.js");
-      });
+	$.post("/api/friends", newFriend, function(data) {
+
+		console.log(newFriend);
+		
+          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+          // $("#nameId").text(data.name);
+          // Show the modal with the best match
+          // $("#results-modal").modal("toggle");
+
+    });
 });	
 </script>
 

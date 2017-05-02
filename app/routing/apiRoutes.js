@@ -7,15 +7,17 @@ console.log("I have received friendsList inside of apiRoutes.");
 
 module.exports = function(app) {
 
-// get request for displaying the homepage
-// res means to get a RESponse, send the file
+// using this route to show a body-parser version of this json response
+	app.get("/api/friends", function(req, res) {
+	  res.json(friends);
+	});
 
-app.get("/api/friends", function(req, res) {
-  res.json(friends);
-});
-
-// app.get("/api/friends", function(req, res) {
-//   res.sendFile(path.join(__dirname, "../public/home.html"));
-// });
+// allowing users to post their info and compare it to users in the system already
+	app.post("api/friends", function(req, res) {
+    // Here we take the result of the user"s survey POST and parse it.
+    	var newFriendData = req.body;
+    	var newFriendScores = newFriend.scores;
+    	friends.push(newFriend);
+	});
 
 }
