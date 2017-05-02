@@ -195,11 +195,24 @@ $('#submitId').on('click', function(event) {
 	event.preventDefault();
 	var newFriend = {
 		name: $('#nameId').val(),
-		score: [$('#question1').val(), $('#question2').val(), $('#question3').val(), $('#question4').val(), $('#question5').val(), $('#question6').val(), $('#question7').val(), $('#question8').val(), $('#question9').val(), $('#question10').val()]
+		score: [
+				$('#question1').val(), 
+				$('#question2').val(), 
+				$('#question3').val(), 
+				$('#question4').val(), 
+				$('#question5').val(), 
+				$('#question6').val(), 
+				$('#question7').val(), 
+				$('#question8').val(), 
+				$('#question9').val(), 
+				$('#question10').val()
+			]
 	};     
-	$.post("/api/friends", newFriend, function(data) {
 
-		console.log(newFriend);
+	var currentURL = window.location.origin;
+
+	$.post(currentURL + "/api/friends", newFriend, function(data) {
+		console.log(data);
 		
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           // $("#nameId").text(data.name);

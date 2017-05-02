@@ -1,4 +1,4 @@
-var friendsList = [
+var friends = [
 	{
 	"name": "Black Power Ranger",
 	"scores": [
@@ -91,4 +91,4 @@ var friendsList = [
 	}
 ]
 
-module.exports = friendsList;
+module.exports = friends;
