@@ -1,7 +1,6 @@
 // requiring friendList data
 var friends = require('../data/friends.js');
-var path = 	require("path");
-require('body-parser');
+
 
 // exporting the function
 // what is the purpose of the apps parameter?
@@ -16,10 +15,9 @@ module.exports = function(app) {
 // allowing users to post their info and compare it to users in the system already
 // this runs when the .post runs after the submit button
 	app.post("/api/friends", function(req, res) {
-
 // this is the item that is coming from the submit button
 // requires body parser to display properly   
-    	test = req.body;
+    	var test = req.body;
     	friends.push(test);
 	});
 

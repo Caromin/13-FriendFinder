@@ -9,15 +9,17 @@ var PORT = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + "/app/public"));
 
-// (app) is the variable app = express(); that is being passed through to the routes.js
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
+// (app) is the variable app = express(); that is being passed through to the routes.js
+// needs to be below the app.use otherwise it does not work, unsure why atm
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 // listening and sending a console log confirm if it is working
 app.listen(PORT, function() {
