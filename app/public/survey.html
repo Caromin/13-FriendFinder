@@ -216,7 +216,13 @@ $('#submitId').on('click', function(event) {
 // in case of error or what to do after data is posted
 	$.post("/api/friends", userData, function(data) {
 
-// inside here is where unrelated code could be, but not related to the app.post in apiRoutes.js    
+    // inside here is where unrelated code could be, but not related to the app.post in apiRoutes.js    
+    
+    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+    $("#match-name").text(data.name);
+    // Show the modal with the best match
+    $("#results-modal").modal("toggle");
+
     });
 });	
 </script>

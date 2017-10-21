@@ -73,6 +73,9 @@ module.exports = function(app) {
     	};
 
     	console.log('this is your best match! ' + bestMatch.name);
+    	
+    	// Return a JSON with the user's bestMatch. This will be used by the HTML in the next page
+    	res.json(bestMatch);
     	// console.log('the final answer is: ' + answer);
 	});
 
