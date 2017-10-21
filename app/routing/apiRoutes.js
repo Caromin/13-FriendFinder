@@ -25,8 +25,7 @@ module.exports = function(app) {
     	//empty variable after finding the best match
     	var bestMatch = {
     		name: '',
-    		photo: '',
-    		totalscore: 0,
+    		// photo: '',
     	};
  	   //this is the starting point, begins high and will be replaced;
  		var minimumDifference = 1000;
@@ -54,20 +53,26 @@ module.exports = function(app) {
     			emptyDifference += parseInt(differencesFor);
     			// console.log(differencesFor);
     		}
-    		console.log(eachDifferenceScoreArray);
+    		// console.log(eachDifferenceScoreArray);
     		eachDifferenceScoreArray.push(emptyDifference);
-    		console.log(eachDifferenceScoreArray);
+    		// console.log(eachDifferenceScoreArray);
     	};
 
     	//this is for finding the score that is closes to zero
     	for (i = 0; i < eachDifferenceScoreArray.length; i++) {
-    		if (emptyDifference[i] < minimumDifference) {
-    			minimumDifference = emptyDifference[i];
-    			console.log('inside the loop: ' + minimumDifference);
+    		if (eachDifferenceScoreArray[i] < minimumDifference) {
+    			// console.log('this is the minimumDifference: ' + minimumDifference);
+    			minimumDifference = eachDifferenceScoreArray[i];
+    			// console.log('inside the loop: ' + minimumDifference);
     			answer = i;
-    			console.log('this inside forloop answer');
+    			// console.log('this inside forloop answer ' + answer);
+    			bestMatch.name = friends[answer].name;
+    			// bestMatch.photo = friends[answer].photo;
+
     		}
     	};
+
+    	console.log('this is your best match! ' + bestMatch.name);
     	// console.log('the final answer is: ' + answer);
 	});
 
