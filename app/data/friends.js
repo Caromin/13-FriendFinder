@@ -1,7 +1,7 @@
 var friends = [
 	{
 	name: "Black Power Ranger",
-	scores: [
+	score: [
 		"5",
 		"1",
 		"4",
@@ -16,7 +16,7 @@ var friends = [
 	},
 	{
 	name: "Red Power Ranger",
-	scores: [
+	score: [
 		"4",
 		"2",
 		"5",
@@ -31,7 +31,7 @@ var friends = [
 	},
 	{
 	name: "Blue Power Ranger",
-	scores: [
+	score: [
 		"5",
 		"2",
 		"2",
@@ -46,7 +46,7 @@ var friends = [
 	},
 	{
 	name: "Pink Power Ranger",
-	scores: [
+	score: [
 		"3",
 		"3",
 		"4",
@@ -61,7 +61,7 @@ var friends = [
 	},
 	{
 	name: "Godzilla (The true 5point king!)",
-	scores: [
+	score: [
 		"5",
 		"5",
 		"5",
@@ -76,7 +76,7 @@ var friends = [
 	},
 	{
 	name: "Jar Jar Binks (Did you even try?)",
-	scores: [
+	score: [
 		"1",
 		"1",
 		"1",
